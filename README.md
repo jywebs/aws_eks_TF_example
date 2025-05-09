@@ -64,25 +64,25 @@ eks_version      = "1.29"
 ```
 
 ## ✅ **Outputs**
- • VPC ID
- • EKS Cluster Name
- • EKS API Endpoint
- • EKS Cluster Certificate Authority
+ - VPC ID
+ - EKS Cluster Name
+ - EKS API Endpoint
+ - EKS Cluster Certificate Authority
 
 ## 💰 **Cost Considerations**
- • NAT Gateways are deployed per AZ to ensure high availability. Consider reducing the number of NAT Gateways for non-production environments.
- • Instance types and desired capacity in managed node groups significantly impact costs. Use t3.medium for dev/test environments and larger instances for production.
- • Enable auto-scaling carefully to prevent unintended cost spikes.
- • Evaluate Savings Plans or Reserved Instances if workloads are long-running.
+ - NAT Gateways are deployed per AZ to ensure high availability. Consider reducing the number of NAT Gateways for non-production environments.
+ - Instance types and desired capacity in managed node groups significantly impact costs. Use t3.medium for dev/test environments and larger instances for production.
+ - Enable auto-scaling carefully to prevent unintended cost spikes.
+ - Evaluate Savings Plans or Reserved Instances if workloads are long-running.
 
 ## 🔒 **Security Best Practices**
- • Use Private Subnets for EKS worker nodes to avoid direct public internet exposure.
- • Apply strict Security Group and NACL rules to limit inbound and outbound traffic.
- • Rotate IAM access keys and leverage AWS Secrets Manager or Parameter Store for managing sensitive data.
- • Enable Kubernetes RBAC and limit permissions using fine-grained IAM roles for service accounts (IRSA).
- • Regularly patch your node AMIs and update the EKS control plane version to maintain security compliance.
+ - Use Private Subnets for EKS worker nodes to avoid direct public internet exposure.
+ - Apply strict Security Group and NACL rules to limit inbound and outbound traffic.
+ - Rotate IAM access keys and leverage AWS Secrets Manager or Parameter Store for managing sensitive data.
+ - Enable Kubernetes RBAC and limit permissions using fine-grained IAM roles for service accounts (IRSA).
+ - Regularly patch your node AMIs and update the EKS control plane version to maintain security compliance.
 
 ## 📌 **Notes**
- • This setup uses managed node groups for easier lifecycle management.
- • NAT Gateways are deployed per AZ to ensure high availability.
- • Modify provider.tf to change the AWS region if needed.
+ - This setup uses managed node groups for easier lifecycle management.
+ - NAT Gateways are deployed per AZ to ensure high availability.
+ - Modify provider.tf to change the AWS region if needed.
