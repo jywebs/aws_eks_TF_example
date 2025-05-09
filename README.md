@@ -41,6 +41,7 @@ This repository provides a **modular Terraform implementation** to deploy a high
     ```
 
 ## 📚 **Project Structure**
+```
 .
 ├── main.tf
 ├── variables.tf
@@ -51,6 +52,7 @@ This repository provides a **modular Terraform implementation** to deploy a high
     ├── vpc/
     ├── iam/
     └── eks/
+```
 
 ## ⚙️ **Customization**
 You can adjust key variables directly in main.tf or move them into variables.tf for easier management.
